@@ -1,5 +1,5 @@
 # lipu-sitelen
-Small, simple, blogging platform. The goal is to share writing and have some kind of community around it.
+Small, simple, blog platform. Share writing easily, comment easily.
 
 ## Initial Thoughts
 Critical features include
@@ -13,8 +13,15 @@ Critical features include
 - [ ] HTML in Markdown allowed without exception since it should ONLY be trusted content.
   - [ ] Gotta make it very clear that it assumes anyone with posting permission is trustworthy..
   - [ ] though maybe make HTML content a trust-level permissions thing.
+  - [ ] NOT FOR COMMENTS, COMMENTS DO NOT GET HTML
+    - [ ] comments should also probably be prevented from including headers? no, the site styling can make the difference clear
 
-WordPress forces stylization on you that I hate, is a monolith with old code, security issues, problems, etc.. and is owned and run by an organization that keeps making decisions that are destructive to sharing writing online. So fuck it, I'm making my own, and keeping it simple and easy.
+### other features
+- [ ] Footer customization.
+- [ ] Archives pages.
+- [ ] Categories
+- [ ] Tags
+- [ ] Post / Page customization settings? Like wrapping things in an article tag or not.
 
 ---
 
