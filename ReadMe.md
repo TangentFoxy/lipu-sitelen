@@ -35,6 +35,8 @@ brew trust openresty/brew
 brew install openresty/brew/openresty
 ```
 
+Also had to add `export PATH=$PATH:/Users/tangent/.luarocks/bin` to `.zschrc` to deal with LuaRocks not handling things correctly. -.-
+
 ###### old projects of various quality to look at and remember how to use Lapis
 - [ ] https://github.com/TangentFoxy/guard13007.com
 - [ ] https://github.com/TangentFoxy/tangentfox-com
