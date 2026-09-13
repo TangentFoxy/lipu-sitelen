@@ -26,3 +26,20 @@ Critical features include
 ---
 
 I briefly thought about calling it lipu pona, but I'll reserve using that name for something better.
+
+###### old projects of various quality to look at and remember how to use Lapis
+- [ ] https://github.com/TangentFoxy/guard13007.com
+- [ ] https://github.com/TangentFoxy/tangentfox-com
+- [ ] https://github.com/TangentFoxy/Ellis
+- [ ] https://github.com/TangentFoxy/GreyList
+- [ ] https://github.com/TangentFoxy/Arcadia
+- [ ] https://github.com/TangentFoxy/insecure-proxy
+- [ ] https://github.com/TangentFoxy/Arcadia.old
+- [ ] https://github.com/TangentFoxy/Realms
+- [ ] https://github.com/TangentFoxy/ClickMine
+- [ ] https://github.com/TangentFoxy/F5-Podcast
+- [ ] https://github.com/TangentFoxy/slackiver
+- [ ] https://github.com/TangentFoxy/KSS
+- [ ] https://github.com/TangentFoxy/Fake.Net
+- [ ] https://github.com/TangentFoxy/F5-Podcast.old
+- [ ] https://github.com/TangentFoxy/Lazucast
