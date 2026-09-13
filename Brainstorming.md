@@ -2,7 +2,7 @@ This is imported from notes I took on my phone on [[2026-09-08]], near 14:00, an
 
 ## Tables
 - Posts
-  - id, share_summary, above_fold, main_body, created_at, updated_at, published_at, view_status, view_count, url_slug, user_id, scheduled_at, parent_id, password_hash, 
+  - id, share_summary, above_fold, main_body, created_at, updated_at, published_at, view_status, view_count, url_slug, user_id, scheduled_at, parent_id, password_hash, post_category, post_tags, 
 - Users
   - id, password_hash, user_name, created_at, updated_at, display_name, is_admin, 
 - Comments
@@ -13,6 +13,8 @@ This is imported from notes I took on my phone on [[2026-09-08]], near 14:00, an
   - id, main_body, view_status, created_at, updated_at, published_at, share_summary, view_count, url_slug, scheduled_at, parent_id, password_hash, 
 - Views
   - id, object_type, object_id, ip_address, created_at, updated_at, user_id, 
+- Tags
+  - id, text (this is both the slug and the actual text), post_count (integer, how many posts have this tag), 
 
 ## Thoughts
 - Views as currently written cannot handle tracking non-objects, like individual pages of posts or the homepage. Or categories, tags..
@@ -49,6 +51,7 @@ I'm trying to think how to efficiently handle the menu. It should be cached in a
 This design can leak information about a page's existence based on server response time to a slug, as it processes whether permissions exist. I'm fine with that, but need it stated.
 
 Tagging: Store unique words, allow manually added tags, have a blacklist for common words? Why bother if they aren't going to be displayed? Displayed tags should only be the median tags (as in, used on multiple posts, but not a huge fraction and not only on one post). I think the blacklist isn't actually necessary? It might make the median selection harder? How do I select tags when there is only one post or a handful of posts? The common words will fuck this idea up too badly too quickly if I don't blacklist?
+- I'm going to start without a blacklist and with no way to automatically select tags to show. This way, I can import all my previous posts and figure out how to handle this.
 
 Categories: Only one category per post. Use the ones from my archive rather than what's on Wordpress. Also allow unset categorization.
 
