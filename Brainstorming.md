@@ -48,9 +48,14 @@ I'm trying to think how to efficiently handle the menu. It should be cached in a
 
 This design can leak information about a page's existence based on server response time to a slug, as it processes whether permissions exist. I'm fine with that, but need it stated.
 
+Tagging: Store unique words, allow manually added tags, have a blacklist for common words? Why bother if they aren't going to be displayed? Displayed tags should only be the median tags (as in, used on multiple posts, but not a huge fraction and not only on one post). I think the blacklist isn't actually necessary? It might make the median selection harder? How do I select tags when there is only one post or a handful of posts? The common words will fuck this idea up too badly too quickly if I don't blacklist?
+
+Categories: Only one category per post. Use the ones from my archive rather than what's on Wordpress. Also allow unset categorization.
+
 ---
 
 After this was written, I considered anonymous analytics gathering using cookies because that is easily blocked and anonymized by separating a user from an IP address. While very fragile, I think this is the best compromise between being easy to set up and preserving as much individual privacy as possible while still allowing me to gather useful data to have some concept of how much reach I have. I think it's biggest flaw is in how to deal with the background noise of spam and surface scanning for attacks that all servers encounter. It also may not be able to recognize bot scanning, especially by AI model training, because they have a vested interest in making that process as secret as possible. By making it based on cookies, which the framework I'm using ensures are secure enough to trust, I can at least keep a difference between noted instances and stuff that appears as a first-time visit. I can only count repeat visits as unique to make it easier to separate from the inflated noise of that background noise, but some data necessarily is lost by that. I also intend to put my server behind a reverse proxy that handles some amount of security and fuzzing for me, so it hopefully won't even be that bad.
+- To only count repeat visits, every request has a UUID assigned only if one wasn't already, but we only store assigned UUIDs on a 2nd load?
 
 ## Alternate ideas to use elsewhere
 I need to NOT do the everything is an object route. It's not worth the theoretical advantages.
@@ -58,7 +63,8 @@ I need to NOT do the everything is an object route. It's not worth the theoretic
 The various references to treating all data as the same type is an idea about how often data structures end up being slight variations on the same thing and a project which allows treating all hierarchical text data as something that can be viewed through any choice of lens instead of an assumed structure. I still want to pursue this idea, but having a functional blog is my biggest priority, and this does not serve that goal. (This hypothetical ideal allows treating a blog with comments, a forum, a Twitter-clone, and a Reddit-clone as all just different ways of viewing the same information. You can organize by various layers and presentations of the same stuff.)
 
 ## Future ideas
-Automatic scoring system. Aka, reddit scoring. I might want to implement that on comments and posts/pages. Might be better elsewhere. Too much overhead for little benefit here.
+- Automatic scoring system. Aka, reddit scoring. I might want to implement that on comments and posts/pages. Might be better elsewhere. Too much overhead for little benefit here.
+- Community-made tags.
 
 - Permissions
   - id, user_id, permission_type, object_type, object_id, created_at, updated_at, 
