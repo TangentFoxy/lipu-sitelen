@@ -34,7 +34,6 @@ I briefly thought about calling it lipu pona, but I'll reserve using that name f
 - [ ] https://github.com/TangentFoxy/GreyList
 - [ ] https://github.com/TangentFoxy/Arcadia
 - [ ] https://github.com/TangentFoxy/insecure-proxy
-- [ ] https://github.com/TangentFoxy/Arcadia.old
 - [ ] https://github.com/TangentFoxy/Realms
 - [ ] https://github.com/TangentFoxy/ClickMine
 - [ ] https://github.com/TangentFoxy/F5-Podcast
