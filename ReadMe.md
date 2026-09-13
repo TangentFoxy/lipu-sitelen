@@ -27,6 +27,14 @@ Critical features include
 
 I briefly thought about calling it lipu pona, but I'll reserve using that name for something better.
 
+## Dev Environment
+I ran into weird issues trying to get this started.. so in case I need to figure this out again:
+```sh
+luarocks install lapis --local OPENSSL_DIR="$(brew --prefix openssl@3)" CRYPTO_DIR="$(brew --prefix openssl@3)"
+brew trust openresty/brew
+brew install openresty/brew/openresty
+```
+
 ###### old projects of various quality to look at and remember how to use Lapis
 - [ ] https://github.com/TangentFoxy/guard13007.com
 - [ ] https://github.com/TangentFoxy/tangentfox-com
