@@ -32,7 +32,7 @@ I ran into weird issues trying to get this started.. so in case I need to figure
 ```sh
 luarocks install lapis --local OPENSSL_DIR="$(brew --prefix openssl@3)" CRYPTO_DIR="$(brew --prefix openssl@3)"
 brew trust openresty/brew
-brew install openresty/brew/openresty
+brew install openresty/brew/openresty --without-geoip
 ```
 
 Also had to add `export PATH=$PATH:/Users/tangent/.luarocks/bin` to `.zschrc` to deal with LuaRocks not handling things correctly. -.-
