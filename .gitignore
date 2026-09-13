@@ -1,0 +1,7 @@
+nginx.conf.compiled
+logs/
+client_body_temp/
+fastcgi_temp/
+proxy_temp/
+scgi_temp/
+uwsgu_temp/
